@@ -1,17 +1,11 @@
 // jshint esversion: 6
 
+// jshint esversion: 6
+
+// See comp-demo-4.html
+
 import React from "react";
-import logo from "./logo.svg";
+import HelloWorld2 from "./HelloWorld2";
 import "./App.css";
 
-class Buttonify extends React.Component {
-  render() {
-    return(
-      <div>
-        <button type={this.props.behavior}>{this.props.children}</button>
-      </div>
-    );
-  }
-}
-
-export default Buttonify;
+export default HelloWorld2;
