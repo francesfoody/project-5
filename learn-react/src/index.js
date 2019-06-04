@@ -1,19 +1,26 @@
 // jshint esversion: 6
 import React from "react";
 import ReactDOM from "react-dom";
-import HelloWorld1 from "./HelloWorld1";
+import "./index.css";
+import Buttonify from "./Buttonify";
+import HelloWorld2 from "./HelloWorld2";
 import * as serviceWorker from "./serviceWorker";
 
-//optional: add style rules to index.css, and uncomment the following line
-import "./index.css";
+var destinationA = document.querySelector(".a");
+var destinationB = document.querySelector(".b");
+var destinationC = document.querySelector(".c");
 
-var destination = document.querySelector("#root");
+//render a component in box a
+ReactDOM.render(<HelloWorld2 greetTarget="Component World" />, destinationA);
 
-//create an instance of a component, and add to DOM
+//render a component in box b
+ReactDOM.render(<HelloWorld2 greetTarget="Hello" />, destinationB);
+
+//render a component in box c
 ReactDOM.render(
-  
-  <HelloWorld1 />,
-  destination
+  <Buttonify behavior="button">Go!</Buttonify>,
+  //destinationC
+  document.querySelector(".c").appendChild(document.createElement("span"))
 );
 
 // If you want your app to work offline and load faster, you can change
